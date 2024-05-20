@@ -26,14 +26,14 @@ hist_norm = cv2.calcHist([normalized_image], [0], None, [256], [0, 256])
 plt.figure(figsize=(12, 6))
 
 # Plot grayscale histogram
-plt.subplot(1, 3, 1)
+plt.subplot(2, 3, 1)
 plt.plot(hist_gray, color='black')
 plt.title('Grayscale Histogram')
 plt.xlabel('Pixel Value')
 plt.ylabel('Frequency')
 
 # Plot RGB histograms
-plt.subplot(1, 3, 2)
+plt.subplot(2, 3, 2)
 plt.plot(hist_b, color='blue', label='Blue Channel')
 plt.plot(hist_g, color='green', label='Green Channel')
 plt.plot(hist_r, color='red', label='Red Channel')
@@ -43,11 +43,26 @@ plt.ylabel('Frequency')
 plt.legend()
 
 # Plot normalized grayscale histogram
-plt.subplot(1, 3, 3)
+plt.subplot(2, 3, 3)
 plt.plot(hist_norm, color='black')
 plt.title('Normalized Histogram')
 plt.xlabel('Pixel Value')
 plt.ylabel('Frequency')
+
+# Plot the gray image
+plt.subplot(2, 3, 4)
+plt.imshow(gray_image, cmap='gray')
+plt.title('Gray Image')
+
+# Plot the original image
+plt.subplot(2, 3, 5)
+plt.imshow(cv2.cvtColor(fundus_image, cv2.COLOR_BGR2RGB))
+plt.title('Original Image')
+
+# Plot the normalized image
+plt.subplot(2, 3, 6)
+plt.imshow(normalized_image, cmap='gray')
+plt.title('Normalized Image')
 
 # Show the plots
 plt.tight_layout()
