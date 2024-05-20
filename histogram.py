@@ -3,7 +3,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # Load the fundus image
-fundus_image = cv2.imread('Images/training/drishtiGS_017.png')
+fundus_image = cv2.imread('Images/training/drishtiGS_037.png')
 
 # Convert the image to grayscale
 gray_image = cv2.cvtColor(fundus_image, cv2.COLOR_BGR2GRAY)
