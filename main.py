@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the fundus image
-fundus_image = cv2.imread('Images/training/drishtiGS_017.png')
+fundus_image = cv2.imread('Images/training/drishtiGS_068.png')
 
 # Check if the image is loaded properly
 if fundus_image is None:
