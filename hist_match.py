@@ -109,6 +109,5 @@ plt.subplot(2, 3, 6)
 plt.imshow(optic_disc_cropped, cmap='gray')
 plt.title('Cropped Image')
 
-
 plt.tight_layout()
 plt.show()
